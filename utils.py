@@ -2,7 +2,7 @@ import re
 
 
 def get_brands(string):
-    temp = re.findall(r"([\w ]+)( vs\. | vs )([\w ]+)", string)
+    temp = re.findall(r"(?i)([\w ]+)( vs\. | vs )([\w ]+)", string)
     if temp:
         return [temp[0][0], temp[0][2]]
     else:
